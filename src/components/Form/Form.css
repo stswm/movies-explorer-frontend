@@ -1,0 +1,154 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.form__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.form__label {
+  padding-bottom: 10px;
+  color: #8b8b8b;
+  font-size: 10px;
+  line-height: 12px;
+}
+.form__input {
+  padding: 15px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
+  background-color: #2f2f2f;
+  border-radius: 8px;
+  border: none;
+}
+.form__input:focus{
+  outline: none;
+}
+.form__item:last-child {
+  margin-bottom: 0;
+}
+.form__item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.form__title {
+  margin: 40px 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+}
+.login__form_shell {
+  display: flex;
+  flex-direction: column;
+}
+.form__btn {
+  width: 100%;
+  max-width: 396px;
+  height: 45px;
+  padding: 0;
+  background-color: #4285f4;
+  color: #fff;
+  border-radius: 3px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__shell_bot {
+  margin-top: auto;
+  text-align: center;
+}
+
+.form__caption {
+  margin: 0;
+  padding-top: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8b8b8b;
+}
+.login__link {
+  padding-left: 6px;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  color: #4285f4;
+}
+.disabled{
+  display: none;
+}
+@media screen and (max-width: 770px) {
+  .form__btn {
+    max-width: 396px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .form {
+    padding: 0 30px;
+  }
+  .form__shell_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form__title {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  .form__list{
+    width: 100%;
+  }
+  .form__btn {
+    max-width: 240px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .form__caption {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .login__link {
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 7px;
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 550px) {
+  .form {
+    padding: 0 30px;
+  }
+  .form__shell_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form__title {
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  .form__list{
+    width: 100%;
+  }
+  .form__btn {
+    max-width: 240px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .form__caption {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .login__link {
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 7px;
+  }
+}

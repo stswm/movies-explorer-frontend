@@ -1,0 +1,20 @@
+.login {
+  margin: 70px auto;
+  height: calc(100vh - 140px);
+}
+/* .form__item_name{
+  display: none;
+} */
+@media screen and (max-width: 770px) {
+  .login {
+    margin: 232px auto;
+    height: calc(100vh - 2 * (232px));
+  }
+}
+@media screen and (max-width: 320px) {
+  .login {
+    margin-top: 56px;
+    margin-bottom: 30px;
+    height: calc(100vh - 86px);
+  }
+}

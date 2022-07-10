@@ -1,0 +1,13 @@
+.page{
+  background-color: #202020;
+  position: relative;
+  max-width: 1280px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.opacityEffect:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}

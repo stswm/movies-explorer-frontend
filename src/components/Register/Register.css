@@ -1,0 +1,17 @@
+.register {
+  margin: 70px auto;
+  height: calc(100vh - 140px);
+}
+@media screen and (max-width: 770px) {
+  .register {
+    margin: 232px auto;
+    height: calc(100vh - 2 * (232px));
+  }
+}
+@media screen and (max-width: 320px) {
+  .register {
+    margin-top: 56px;
+    margin-bottom: 30px;
+    height: calc(100vh - 86px);
+  }
+}
