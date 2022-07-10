@@ -12,7 +12,7 @@ import Register from '../Register/Register';
 import NotFound from '../NotFound/NotFound';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import cards from '../../utils/MoviesList';
-import movieList from '../../utils/SaveMovieList'
+import movieList from '../../utils/SaveMovieList';
 
 import './App.css';
 
@@ -22,17 +22,13 @@ function App() {
 
   const handleLikeMovies = (card) => {
     if (!movieList.includes(card)) {
-      card.check = true;
       movieList.push(card);
     }
   };
 
   const handleDeleteMovies = (card) => {
-    const test = movieList.includes(card)
-    if (test) {
-      card.check = false;
-      const test2 = movieList.indexOf(card)
-      movieList.splice(test2, 1);
+    if (movieList.includes(card)) {
+      movieList.splice(movieList.indexOf(card), 1);
     }
   };
 
@@ -50,6 +46,7 @@ function App() {
           <Movies
             cards={cards}
             onCardLike={handleLikeMovies}
+            onCardDelete={handleDeleteMovies}
           />
         </Route>
 
