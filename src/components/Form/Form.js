@@ -20,7 +20,7 @@ function Form({ header, btnName, caption, link, path, loginForm }) {
             <input
               className='form__input'
               placeholder=' Ваше Имя'
-              type='email'
+              type='text'
               required
             />
             <span className='form__error'> </span>

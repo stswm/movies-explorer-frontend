@@ -16,10 +16,10 @@ function AboutMe() {
 
           <ul className='about-me__links'>
             <li className='about-me__link'>
-              <a className='about-me__item opacityEffect' href='http://stswm.nomoredomains.xyz'>Facebook</a>
+              <a className='about-me__item opacityEffect' href='https://www.facebook.com' target={'_blank'}>Facebook</a>
             </li>
             <li className='about-me__link'>
-              <a className='about-me__item opacityEffect' href='http://stswm.nomoredomains.xyz'>Github</a>
+              <a className='about-me__item opacityEffect' href='https://github.com/stswm' target={'_blank'}>Github</a>
             </li>
           </ul>
         </div>
