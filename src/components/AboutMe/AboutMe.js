@@ -23,7 +23,8 @@ function AboutMe() {
             </li>
           </ul>
         </div>
-        <img className='about-me__img' src={img} alt='Фотография студента' />
+        <div className='about-me__img-shell'></div>
+        {/* <img className='about-me__img' src={img} alt='Фотография студента' /> */}
       </div>
       <Portfolio/>
     </section>
