@@ -104,6 +104,7 @@
     padding-bottom: 90px;
   }
   .about-me__img-shell {
+    margin-left: 49px;
     width: 255px;
     max-height: 307px;
   }
@@ -121,6 +122,7 @@
     padding-bottom: 70px;
   }
   .about-me__img-shell {
+    margin-left: 0;
     max-width: 90vw;
     max-height: 352px;
   }
