@@ -23,12 +23,14 @@ function App() {
   const handleLikeMovies = (card) => {
     if (!movieList.includes(card)) {
       movieList.push(card);
+      card.check = true
     }
   };
-
+  
   const handleDeleteMovies = (card) => {
     if (movieList.includes(card)) {
       movieList.splice(movieList.indexOf(card), 1);
+      card.check = false
     }
   };
 
