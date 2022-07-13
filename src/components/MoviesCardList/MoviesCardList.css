@@ -1,0 +1,29 @@
+.cards{
+  /* display: flex; */
+  padding: 70px;
+  padding-bottom: 10px;
+}
+.cards__list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  /* justify-self: center; */
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 270px);
+  column-gap: 20px;
+  row-gap: 38px;
+}
+.cards__more-btn{
+  width: 100%;
+  background: #2F2F2F;
+  border: none;
+  border-radius: 6px;
+  height: 36px;
+  padding: 0;
+  margin: 50px auto 80px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+}

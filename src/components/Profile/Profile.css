@@ -1,0 +1,141 @@
+.profile {
+  /* 74px heaher 100vh-header чтоб вертикального скролла не было */
+  height: calc(100vh - 74px);
+  margin: 0 auto;
+  display: flex;
+}
+.profile__form {
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+}
+.profile__shell-top {
+  display: flex;
+  flex-direction: column;
+  padding-top: 74px;
+}
+.profile__title{
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #fff;
+}
+.profile__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-top: 123px;
+}
+.profile__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 17px;
+}
+.profile__item:last-of-type{
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.profile__item-text{
+  max-width: 121px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #fff;
+}
+.profile__input {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #fff;
+  background-color: #202020;
+  padding: 6px 0;
+  border:none;
+  text-align: right;
+}
+.profile__input:focus{
+  outline: none;
+}
+.profile__shell-bot {
+  margin-top: auto;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.profile__button{
+  width: 100%;
+  max-width: 410px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 16px;
+}
+.profile__button:last-child{
+  margin-bottom: 0;
+}
+.profile__button-logout{
+color: #EE3465;
+}
+
+@media screen and (max-width: 770px) {
+  .profile{
+    height: auto;
+  }
+  .profile__shell-top{
+    padding-top: 236px;
+  }
+  .profile__shell-bot{
+    padding-top: 210px;
+    padding-bottom: 269px;
+  }
+  .profile__list{
+    padding-top: 96px;
+  }
+
+}
+@media screen and (max-width: 320px) {
+  .profile{
+    height: calc(100vh - 74px);
+  }
+  .profile__shell-top {
+    padding-top: 70px;
+}
+.profile__list {
+  padding-top: 80px;
+}
+.profile__form{
+  width: 260px;
+}
+.profile__shell-bot {
+  padding-bottom: 40px;
+  padding-top: 0;
+}
+}
+@media screen and (min-width: 321px) and (max-width: 450px) {
+  .profile{
+    height: calc(100vh - 74px);
+  }
+  .profile__shell-top {
+    padding-top: 70px;
+}
+.profile__list {
+  padding-top: 80px;
+}
+.profile__form{
+  width: 260px;
+}
+.profile__shell-bot {
+  padding-bottom: 40px;
+  padding-top: 0;
+}
+}

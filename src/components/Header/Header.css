@@ -1,0 +1,29 @@
+.header {
+  padding: 18px 70px;
+}
+.header-main{
+  background-color: #073042;
+}
+.header__shell{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo{
+  max-height: 38px;
+}
+.header__shell_lr{
+  
+}
+@media screen and (max-width: 768px) {
+  .header{
+    padding: 18px 30px;
+    
+  }
+}
+@media screen and (max-width: 320px) {
+  .header{
+    padding: 18px 14px;
+
+  }
+}
