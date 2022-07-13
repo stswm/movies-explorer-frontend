@@ -39,6 +39,7 @@
     font-size: 28px;
     line-height: 50px;
     background-size: 60px 27px;
+    padding-right: 40px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -53,5 +54,21 @@
     font-size: 18px;
     line-height: 28px;
     background-size: 28px 18px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 400px)  {
+  .portfolio__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .portfolio__list{
+    padding-top: 20px;
+  }
+  .portfolio__list_link {
+    
+    font-size: 18px;
+    line-height: 28px;
+    background-size: 28px 18px;
+    padding-right: 30px;
   }
 }
