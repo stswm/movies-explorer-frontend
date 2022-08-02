@@ -1,12 +1,19 @@
-import './Switcher.css'
+import './Switcher.css';
 
-function Switcher() {
+function Switcher({shotMovies,setShortMovies,onChange}) {
+  function checkboxHandler() {
+    setShortMovies(!shotMovies);
+  }
   return (
-      <label className='switch'>
-        <input type='checkbox' />
-        <span className='slider'></span>
-      </label>
+    <label className='switch'>
+      <input
+        type='checkbox'
+        onChange={onChange}
+        checked={shotMovies && 'checked'}
+      />
+      <span className='slider'></span>
+    </label>
   );
 }
 
-export default Switcher
+export default Switcher;

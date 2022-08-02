@@ -24,10 +24,18 @@
 .card__elements:hover .movies-card__button-type-delete {
   display: block;
 }
-.card_deleted{
+.card_deleted {
   display: none;
 }
-
+.card {
+  /* display: flex; */
+}
+.card__image {
+  height: 151px;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
 .card__title {
   margin: 0;
   display: inline;
