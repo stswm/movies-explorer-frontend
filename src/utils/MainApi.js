@@ -81,8 +81,8 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: 'https://api.stswm.movie.nomoredomains.xyz',
-  // baseUrl: 'http://localhost:3099',
+  // baseUrl: 'https://api.stswm.movie.nomoredomains.xyz',
+  baseUrl: 'http://localhost:3099',
   // baseUrl: 'https://localhost:3000',
   headers: { 'Content-Type': 'application/json' },
 });

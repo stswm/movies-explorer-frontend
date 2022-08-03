@@ -54,6 +54,7 @@ function SearchForm({ onSearchMovies }) {
             className='search-form__input'
             type='text'
             placeholder='Фильм'
+            value={query || ''}
             onChange={handleChangeQuery}
             required
           />
