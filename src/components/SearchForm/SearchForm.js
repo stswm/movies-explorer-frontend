@@ -4,12 +4,14 @@ import Switcher from '../../utils/Switcher/Switcher';
 import { useLocation } from 'react-router-dom';
 
 function SearchForm({ onSearchMovies }) {
-  const [query, setQuery] = useState('');
-  const [checkboxStatus, setCheckboxStatus] = useState(false);
+  const [query, setQuery] = useState(localStorage.getItem('query') ?? '');
+  const [checkboxStatus, setCheckboxStatus] = useState(localStorage.getItem('checkboxStatus') ?? false);
   let location = useLocation();
+  
+  // console.log("checkboxStatus form",checkboxStatus);
   useEffect(() => {
     const value = localStorage.getItem('checkboxStatus');
-      if (location.pathname === '/movies') {
+      if (location.pathname === '/movies' || '/saved-movies') {
         if (localStorage.getItem('query')) {
           setQuery(localStorage.getItem('query'));
         } 
@@ -44,7 +46,7 @@ function SearchForm({ onSearchMovies }) {
       input.setCustomValidity('Нужно ввести ключевое слово');
     }
   }, [query])
-
+  
   return (
     <section className='search-form'>
       <form className='search-form__form' onSubmit={handleSubmit}>

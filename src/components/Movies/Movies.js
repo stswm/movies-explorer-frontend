@@ -10,6 +10,7 @@ import Preloader from '../Preloader/Preloader';
 function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
   const [query, setQuery] = useState('');
   const [checkboxStatus, setCheckboxStatus] = useState(false);
+  // console.log("checkboxStatus movies",checkboxStatus);
 
   const [initialMovies, setInitialMovies] = useState([]);
   const [moviesToRender, setMoviesToRender] = useState([]);
