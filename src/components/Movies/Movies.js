@@ -9,8 +9,9 @@ import Preloader from '../Preloader/Preloader';
 
 function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
   const [query, setQuery] = useState('');
-  const [checkboxStatus, setCheckboxStatus] = useState(false);
-  // console.log("checkboxStatus movies",checkboxStatus);
+  const [checkboxStatus, setCheckboxStatus] = useState(
+    JSON.parse(localStorage.getItem('checkboxStatus')) ?? false
+  );
 
   const [initialMovies, setInitialMovies] = useState([]);
   const [moviesToRender, setMoviesToRender] = useState([]);
@@ -37,7 +38,7 @@ function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
     setMoviesToRender([]);
     setQuery(query);
     setCheckboxStatus(checkboxStatus);
-    setLoading(true)
+    setLoading(true);
     const initialMoviesInLocalStorage = JSON.parse(
       localStorage.getItem('initialMovies')
     );
@@ -56,15 +57,15 @@ function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
         })
         .finally(() => {
           setSearchMovies(false);
-          setLoading(false)
+          setLoading(false);
         });
-      } else {
-        setInitialMovies(initialMoviesInLocalStorage);
-        setSearchStatus(
-          'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'
-        );
-        setLoading(false)
-      }
+    } else {
+      setInitialMovies(initialMoviesInLocalStorage);
+      setSearchStatus(
+        'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'
+      );
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -88,11 +89,11 @@ function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
     }
   }, [filteredMovies, firstResultsNumber]);
   function handleMoreButtonClick() {
-    setLoading(true)
+    setLoading(true);
     setMoviesToRender((state) =>
       filteredMovies.slice(0, state.length + moreResultsNumber)
     );
-    setLoading(false)
+    setLoading(false);
   }
   useEffect(() => {
     if (moviesToRender.length === filteredMovies.length) {
@@ -130,15 +131,18 @@ function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
           onCardDelete={onCardDelete}
         />
       ) : (
-        <span className='movies__status'>{searchStatus}
-        </span>
+        <span className='movies__status'>{searchStatus}</span>
       )}
 
       {isLoading ? (
         <Preloader />
       ) : (
         <button
-          className={isMoreButtonVisible ? 'movies__more-btn opacityEffect ' : 'displayNone'}
+          className={
+            isMoreButtonVisible
+              ? 'movies__more-btn opacityEffect '
+              : 'displayNone'
+          }
           type='button'
           name='test'
           onClick={handleMoreButtonClick}
