@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
@@ -9,26 +9,18 @@ import mainApi from '../../utils/MainApi';
 
 function SavedMovies({ cards, onCardClick, onCardDelete }) {
   const [initialSavedMovies, setInitiaSavedlMovies] = useState([]);
-  const [query, setQuery] = useState(localStorage.getItem('query') ?? '');
-  const [checkboxStatus, setCheckboxStatus] = useState(
-    JSON.parse(localStorage.getItem('checkboxStatus')) ?? false
-  );
+  const [querySaved, setQuerySaved] = useState('');
+  const [checkboxStatus, setCheckboxStatus] = useState(false);
 
   useEffect(() => {
-    mainApi.getMovies().then((data) => {
-      const filteredMovies = moviesFilter(data, query, checkboxStatus);
+      const filteredMovies = moviesFilter(cards, querySaved, checkboxStatus);
       setInitiaSavedlMovies(filteredMovies);
-    });
-  }, [query, checkboxStatus]);
+  }, [querySaved, checkboxStatus, cards]);
 
-  const handleSearch = (query, checkboxStatus) => {
-    setQuery(query);
+  const handleSearch = (querySaved, checkboxStatus) => {
+    setQuerySaved(querySaved);
     setCheckboxStatus(checkboxStatus);
   };
-  useEffect(() => {
-    localStorage.setItem('query', query);
-    localStorage.setItem('checkboxStatus', checkboxStatus);
-  }, [query, checkboxStatus]);
 
   return (
     <section className='saved-movies'>

@@ -45,27 +45,27 @@ function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
     if (!initialMoviesInLocalStorage) {
       setSearchMovies(true);
       moviesApi
-        .getMovies()
-        .then((data) => {
-          setInitialMovies(data);
-          localStorage.setItem('initialMovies', JSON.stringify(data));
-        })
-        .catch(() => {
-          setSearchStatus(
-            'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'
+      .getMovies()
+      .then((data) => {
+        setInitialMovies(data);
+        localStorage.setItem('initialMovies', JSON.stringify(data));
+      })
+      .catch(() => {
+        setSearchStatus(
+          'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'
           );
         })
         .finally(() => {
           setSearchMovies(false);
           setLoading(false);
         });
-    } else {
-      setInitialMovies(initialMoviesInLocalStorage);
-      setSearchStatus(
-        'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'
-      );
-      setLoading(false);
-    }
+      } else {
+        setInitialMovies(initialMoviesInLocalStorage);
+        setSearchStatus(
+          'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.'
+          );
+          setLoading(false);
+        }
   };
 
   useEffect(() => {
@@ -131,7 +131,7 @@ function Movies({ cards, onCardClick, onCardLike, onCardDelete }) {
           onCardDelete={onCardDelete}
         />
       ) : (
-        <span className='movies__status'>{searchStatus}</span>
+        <span className='movies__status'>{searchStatus || "Ничего не найдено"}</span>
       )}
 
       {isLoading ? (
