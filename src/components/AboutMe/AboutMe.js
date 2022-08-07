@@ -1,5 +1,4 @@
 import React from 'react';
-import img from '../../images/avatar.jpg';
 import './AboutMe.css';
 import Portfolio from '../Portfolio/Portfolio';
 
@@ -40,7 +39,6 @@ function AboutMe() {
           </ul>
         </div>
         <div className='about-me__img-shell'></div>
-        {/* <img className='about-me__img' src={img} alt='Фотография студента' /> */}
       </div>
       <Portfolio />
     </section>

@@ -17,7 +17,7 @@ function Navigation({ loggedIn }) {
 
   return (
     <nav className='navigation'>
-      {loggedIn ? (
+      {!loggedIn ? (
           <>
             <Link className='navigation__user_register' to="/signup"> Регистрация </Link>
             <Link className='navigation__user_login' to="/login"> Войти </Link>
